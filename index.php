@@ -36,10 +36,9 @@ session_activity();
 		$city = post('city');
 		$zip = post('zip');
 
+		$date = date($dob);
 		$sql = "INSERT INTO `mempdata`(`empid`, `empname`, `father_name`, `dob`, `email`, `mobile`, `aadhaar`, `pan`, `dept`, `dept_code`, `acc_num`, `ifsc`, `bank`, `b_area`, `flat_num`, `area`, `post`, `city`, `zip`) VALUES 
-		('$empid', '$empname', '$fathers_name', STR_TO_DATE('$dob', '%d/%m/%Y')), '$email', '$mobile_num', '$aadhar_num', '$pan_num', '$dept', '$dept_code', '$acc_no', '$ifsc', '$bank', '$barea', '$flat_num', '$area', '$post', '$city', '$zip')";
-		echo $sql;
-
+		('$empid', '$empname', '$fathers_name', '$date', '$email', '$mobile_num', '$aadhar_num', '$pan_num', '$dept', '$dept_code', '$acc_no', '$ifsc', '$bank', '$barea', '$flat_num', '$area', '$post', '$city', '$zip')";
 		
 		$query = query($connection, $sql);
 

@@ -1,4 +1,5 @@
 <script src="js/header.js"></script>
+<link href="css/header.css" rel="stylesheet">
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
 		
@@ -22,7 +23,7 @@
 			<!-- Search Bar -->
 			<form class="navbar-form navbar-left">
 				<div class="form-group">
-					<input type="text" class="form-control" id="empsearch" placeholder="Search by ID" onkeyup="ajaxCheck()">
+					<input type="text" class="form-control" id="empsearch" placeholder="Search by ID" onkeyup="ajaxCheck()" autofocus>
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
@@ -45,3 +46,28 @@
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>
+
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Search Results</h4>
+			</div>
+			<div class="modal-body">
+				<ul id="employeeList">
+
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+	</div>
+</div>

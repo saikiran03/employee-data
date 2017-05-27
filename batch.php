@@ -3,25 +3,16 @@
 require "config/connection.php";
 require "config/helpers.php";
 
-function save ($res	) {
-	$sql = "INSERT INTO mempdata VALUES ()";
-	echo $sql;
-}
-
 $sql = "SELECT * FROM empdata";
 $query = query($connection, $sql);
 
-$objects = array();
-
 while ($res = mysqli_fetch_object($query)) {
-	if ($res->empid!='100637')
-		continue;
-
-	$f = (object)(array(
+	$f = (array(
 		'empid' => $res->empid,
 		'empname' => $res->empname,
 		'father_name' => $res->fathers_name,
 		'dob' => $res->dob,
+		// 'dob' => date("Y-m-d", strtotime($res->dob)),
 		'email' => '',
 		'mobile' => $res->mobile_num,
 		'aadhaar' => $res->aadhaar_num,
@@ -40,11 +31,7 @@ while ($res = mysqli_fetch_object($query)) {
 		'timestamp' => $res->timestamp
 	));
 
-	$ser = serialize($f);
-	// echo $ser;
-	// echo json_encode($f);
-	echo "INSERT INTO mempdata VALUES ('unserialize($ser)')";
-
-	// mysqli_query($connection, "INSERT INTO mempdata VALUES ('$f')")
-
+	$sql = "INSERT INTO mempdata VALUES ('".join($f, "', '")."')";
+	query($connection, $sql);
+	echo $res->empid."<br>";
 }

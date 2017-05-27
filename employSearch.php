@@ -6,15 +6,11 @@ if ($_POST['empId']) {
 
 	$empid = $_POST['empId'];
 	$sql = "SELECT * FROM empdata WHERE empid LIKE '$empid%'";
-
 	$query = query($connection, $sql);
 
-	$empids = array();
 	while ($result = mysqli_fetch_object($query)) {
-		array_push($empids, $result);
+		echo json_encode($result)."\n \n";
 	}
-
-	print_r($empids);
 }
 
 ?>
