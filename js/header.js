@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 function SelectBank(valueToSelect)
@@ -38,6 +39,12 @@ function ajaxCheck(){
 		showEmployees(data);
 	});
 
+=======
+var searchResults;
+
+function fillData(id) {
+	console.log(searchResults[id]);
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 	return;
 }
 
@@ -67,6 +74,7 @@ function showEmployees(employeeData) {
 	}
 }
 
+<<<<<<< HEAD
 function fillData(id) {
 	console.log(searchResults[id]);
 	var json = searchResults[id];
@@ -96,3 +104,16 @@ function fillData(id) {
 }
 
 // document.getElementsByClassName("search-result").style.cursor = "pointer";
+=======
+function ajaxCheck(){
+	var id = $("#empsearch").val();
+	
+	$.post("employSearch.php", {
+		"empId" : id
+	}, function(data, status){
+		showEmployees(data);
+	});
+
+	return;
+}
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c

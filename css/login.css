@@ -104,6 +104,7 @@ body {
   color: "red";
   font-size: 10px;
   font-face: Roboto;
+<<<<<<< HEAD
 }
 
 @media (max-width: 600px) and (max-width: 420px) {
@@ -113,3 +114,6 @@ body {
   margin: auto;
 }
  }
+=======
+}
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c

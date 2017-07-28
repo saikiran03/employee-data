@@ -27,6 +27,7 @@
                     }
                 }
             },
+<<<<<<< HEAD
             // email: {
             //     validators: {
             //         // notEmpty: {
@@ -37,6 +38,18 @@
             //         }
             //     }
             // },
+=======
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your email address'
+                    },
+                    emailAddress: {
+                        message: 'Please supply a valid email address'
+                    }
+                }
+            },
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
             phone: {
                 validators: {
                     notEmpty: {
@@ -80,6 +93,7 @@
                     notEmpty: {
                         message: 'Please supply your zip code'
                     },
+<<<<<<< HEAD
                     stringLength: {
                         min: 6,
                         max: 6,
@@ -89,6 +103,12 @@
                     //     country: 'IN',
                     //     message: 'Please supply a vaild zip code'
                     // }
+=======
+                    zipCode: {
+                        country: 'IN',
+                        message: 'Please supply a vaild zip code'
+                    }
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
                 }
             },
             comment: {

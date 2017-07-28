@@ -3,10 +3,13 @@
 	/*border: 1px solid black;*/
 	margin: 5px;
 }
+<<<<<<< HEAD
 
 .search-result a {
 	cursor: pointer;
 }
+=======
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 .search-result:hover {
 	/*border: 1 1 1  solid blue;*/
 	box-shadow: 0 0 10px lightblue;

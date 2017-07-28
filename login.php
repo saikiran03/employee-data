@@ -58,11 +58,14 @@
 				-->
 			</form>
 		</div>
+<<<<<<< HEAD
 	<footer class="footer">
       <div class="container">
         <p style="text-align:center">Designed and Developed by <a href="http://www.creativecat.in" target="blank">creativecat.in</a></p>
       </div>
     </footer>
+=======
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 	</div>
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script>

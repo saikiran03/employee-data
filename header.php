@@ -11,7 +11,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
+<<<<<<< HEAD
 			<a class="navbar-brand" href="#">employee details</a>
+=======
+			<a class="navbar-brand" href="#">Gopi Is Gay</a>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -31,7 +35,11 @@
 			<!-- Navbar -->
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active"><a href="index.php">Enter Data <span class="sr-only">(current)</span></a></li>
+<<<<<<< HEAD
 				<li><a href="fetchDb.php" target="blank">Download</a></li>
+=======
+				<li><a href="fetchDb.php">Fetch Database</a></li>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -71,6 +79,7 @@
 
 	</div>
 </div>
+<<<<<<< HEAD
 
 <div id="notificationModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
@@ -91,3 +100,5 @@
 
 	</div>
 </div>
+=======
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c

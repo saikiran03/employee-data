@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 
 function download ($filename) {
 	require_once "config/connection.php";
@@ -8,6 +9,24 @@ function download ($filename) {
 	$query = mysqli_query($connection, $sql);
 
 	// $filename = "empdetails.xls";
+=======
+$fetch = false;
+if ($_POST){
+	$fetch = true;
+}
+
+if ($fetch) {
+
+	require_once 'config/connection.php';
+
+	$startTime = date( "Y-m-d H:i:s", strtotime($_POST['startTime']) );
+	$endTime = date( "Y-m-d H:i:s", strtotime($_POST['endTime']) );
+
+	$sql = "select * from `table 2` where timestamp BETWEEN '$startTime' and '$endTime';";
+	$query = mysqli_query($connection, $sql);
+
+	$filename = "GopiIsGay.xls";
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 	header("Content-Disposition: attachment; filename=\"$filename\"");
 	header("Content-Type: application/vnd.ms-excel");
 
@@ -20,6 +39,7 @@ function download ($filename) {
 
 		echo implode("\t", array_values($row)). "\r\n";
 	}
+<<<<<<< HEAD
 }
 
 download("details.xls");
@@ -68,6 +88,15 @@ download("details.xls");
 ?>
 
 <!-- <!DOCTYPE HTML>
+=======
+
+	// header("Location: redirect.php");
+}
+else {
+?>
+
+<!DOCTYPE HTML>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 <html>
 	<head>
 		<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
@@ -76,9 +105,13 @@ download("details.xls");
 		<link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
 	</head>
 	<body>
+<<<<<<< HEAD
 		<?php
 			 //include "header.php"; 
 		?>
+=======
+		<?php include "header.php"; ?>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 		<div class="container">
 			<div class="col-md-offset-4 col-md-4" style="padding-top:103px;">
 				<form action="fetchDb.php" method="post">
@@ -109,7 +142,11 @@ download("details.xls");
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"> </script> 
 		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"> </script>
 	-->
+<<<<<<< HEAD
 	<!--	<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"> </script>
+=======
+		<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"> </script>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 		<script type="text/javascript">
 			$('#datetimepicker').datetimepicker({
 				format: 'dd/MM/yyyy hh:mm:ss',
@@ -122,8 +159,14 @@ download("details.xls");
 			});
 		</script>
 	</body>
+<<<<<<< HEAD
 <html> -->
 
 <?php 
 // } 
 ?>
+=======
+<html>
+
+<?php } ?>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c

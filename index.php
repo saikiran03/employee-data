@@ -17,9 +17,14 @@ session_activity();
 		$mobile_num = post('phone');
 		$aadhar_num = post('adhar_no');
 		$pan_num = post('pan_no');
+<<<<<<< HEAD
 		$dept_data = explode("-", post('dept'));
 		$dept = $dept_data[0];
 		$dept_code = $dept_data[1];
+=======
+		$dept = post('dept');
+		$dept_code = post('dept_code');
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 		
 		
 		// bank stuff
@@ -38,6 +43,7 @@ session_activity();
 		$zip = post('zip');
 
 		$date = date($dob);
+<<<<<<< HEAD
 		$tsql = "SELECT empid from mempdata WHERE empid='$empid';";
 		$tquery = mysqli_query($connection, $tsql);
 
@@ -61,6 +67,18 @@ session_activity();
 		}
 		else {
 			$error_message = "Query failure!";
+=======
+		$sql = "INSERT INTO `mempdata`(`empid`, `empname`, `father_name`, `dob`, `email`, `mobile`, `aadhaar`, `pan`, `dept`, `dept_code`, `acc_num`, `ifsc`, `bank`, `b_area`, `flat_num`, `area`, `post`, `city`, `zip`) VALUES 
+		('$empid', '$empname', '$fathers_name', '$date', '$email', '$mobile_num', '$aadhar_num', '$pan_num', '$dept', '$dept_code', '$acc_no', '$ifsc', '$bank', '$barea', '$flat_num', '$area', '$post', '$city', '$zip')";
+		
+		$query = query($connection, $sql);
+
+		if ($query) {
+			echo "Successfully saved !!";
+		}
+		else {
+			echo "User may already exist.";
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 		}
 	}
 
@@ -71,14 +89,21 @@ session_activity();
 <html >
 <head>
 	<meta charset="UTF-8">
+<<<<<<< HEAD
 	<title>Employee Details</title>
+=======
+	<title>Bootstrap 3 Contact form with Validation</title>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 
 	<!-- <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script> -->
 	<!-- <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> -->
 	<!-- <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'> -->
 	<!-- <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'> -->
 	<script type="text/javascript" src="req/js/modernizr.js"></script>
+<<<<<<< HEAD
          <link rel="icon" href="cat_favicon.png" type="image/gif">
+=======
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 	<link rel="stylesheet" type="text/css" href="req/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="req/css/bootstrapValidator.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -94,6 +119,7 @@ session_activity();
 	<div class="container">
 
 		<!-- <div id="inac-meter"></div> -->
+<<<<<<< HEAD
 		<form class="well form-horizontal" action="index.php" method="post"  id="contact_form">
 			<fieldset>
 
@@ -101,6 +127,15 @@ session_activity();
 				<legend style="text-align:center">Employee Data </legend>
 				
 				<h3 >Basic Info</h3>
+=======
+		<form class="well form-horizontal" action=" " method="post"  id="contact_form">
+			<fieldset>
+
+				<!-- Form Name -->
+				<legend>Employee data !</legend>
+				
+				<h3>Basic Info</h3>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 				<div class="alert alert-info">	
 
 					<!-- Text input Emp ID-->
@@ -127,7 +162,11 @@ session_activity();
 
 					<!-- Text input Father Name-->
 					<div class="form-group">
+<<<<<<< HEAD
 						<label class="col-md-4 control-label" >Father Name</label> 
+=======
+						<label class="col-md-4 control-label" >Father's Name</label> 
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 						<div class="col-md-4 inputGroupContainer">
 							<div class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -164,7 +203,11 @@ session_activity();
 						<div class="col-md-4 inputGroupContainer">
 							<div class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<<<<<<< HEAD
 								<input name="phone" placeholder="+91-1234567890" class="form-control" type="text">
+=======
+								<input name="phone" placeholder="+91-8768789141" class="form-control" type="text">
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 							</div>
 						</div>
 					</div>
@@ -197,6 +240,7 @@ session_activity();
 						<div class="col-md-4 selectContainer">
 							<div class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+<<<<<<< HEAD
 								<select name="dept" class="form-control selectpicker" onchange="updateDeptCode()" id="deptcode">
 										<option value="" disabled>Please select department</option>
 									  	<option value="00569G">HSBC-00569G</option>
@@ -244,13 +288,24 @@ session_activity();
 									   	<option value="3070">CO&CCP/Bat/Elec-3070</option>
 									   	<option value="3070">CO&CCP/Bat/G/Elec-3070</option>
 									   	<option value="3000">CO&CCP/Bat/H&R-3000<option>					  							 
+=======
+								<select name="dept" class="form-control selectpicker" onchange="updateDeptCode()">
+									<option value="" disabled>Please select department</option>
+									<option>Alabama</option>
+									<option>Alaska</option>
+									<option >Arizona</option>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 								</select>
 							</div>
 						</div>
 					</div>
 
 					<!-- Text input Dept Code-->
+<<<<<<< HEAD
 					<!-- <div class="form-group">
+=======
+					<div class="form-group">
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 						<label class="col-md-4 control-label">Department Code</label>  
 						<div class="col-md-4 inputGroupContainer">
 							<div class="input-group">
@@ -258,7 +313,11 @@ session_activity();
 								<input name="dept_code" placeholder="code" class="form-control" type="text">
 							</div>
 						</div>
+<<<<<<< HEAD
 					</div> -->
+=======
+					</div>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 				</div>
 				<hr>
 				
@@ -304,6 +363,7 @@ session_activity();
 									<div class="col-md-6 selectContainer">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+<<<<<<< HEAD
 											<select name="bank" class="form-control selectpicker" id="bank">
 												<option value="" disabled>Please select your bank</option>
 												<option  value="">Bank Name</option>
@@ -321,6 +381,13 @@ session_activity();
                                                                                                <option  value="DCC Bank">DCC Bank</option>
                                                                                                <option  value="HDFC Bank">HDFC Bank</option>
                                                                                                  <option  value="HSBC Bank">HSBC Bank</option>
+=======
+											<select name="bank" class="form-control selectpicker" >
+												<option value="" disabled>Please select your bank</option>
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option >Arizona</option>
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 											</select>
 										</div>
 									</div>
@@ -395,12 +462,15 @@ session_activity();
 
 			</fieldset>
 		</form>
+<<<<<<< HEAD
 	
     <footer class="footer">
       <div class="container">
         <p style="text-align:center">Designed and Developed by <a href="http://www.creativecat.in" target="blank">creativecat.in</a></p>
       </div>
     </footer>
+=======
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 	</div>
 	
 </div><!-- /.container -->
@@ -412,6 +482,7 @@ session_activity();
 <script type="text/javascript" src="req/js/bootstrapvalidator.min.js"></script>
 <script src="js/validation.js"></script>
 <script>
+<<<<<<< HEAD
 
 	$("input[name='email'").attr("required", false);
 
@@ -420,6 +491,8 @@ session_activity();
 		showNotification(error);
 
 
+=======
+>>>>>>> f0d1d4b2fc22b1fa95018ecf99c709dcacdcc19c
 	var lact = 0;
 	setInterval(function(){
 		$("#inac-meter").html("Session inactive for " + lact + " seconds.");
