@@ -1,0 +1,14 @@
+.search-result {
+	padding: 10px;
+	/*border: 1px solid black;*/
+	margin: 5px;
+}
+
+.search-result a {
+	cursor: pointer;
+}
+.search-result:hover {
+	/*border: 1 1 1  solid blue;*/
+	box-shadow: 0 0 10px lightblue;
+	border-radius: 3px
+}
