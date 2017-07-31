@@ -1,9 +1,7 @@
 <?php
 
 session_start();
-if (session("username")==NULL) {
-	header("location:login.php");
-}
+redirect_unauth();
 
 function download ($filename) {
 	require_once "config/connection.php";
