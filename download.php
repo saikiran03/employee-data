@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+if (session("username")==NULL) {
+	header("location:login.php");
+}
 
 function download ($filename) {
 	require_once "config/connection.php";
@@ -39,7 +43,7 @@ if ($fetch) {
 
 	$startTime = date( "Y-m-d H:i:s", strtotime($_POST['startTime']) );
 	$endTime = date( "Y-m-d H:i:s", strtotime($_POST['endTime']) );
-	echo $startTime.", "$endTime."<br>";
+	echo $startTime.", ".$endTime."<br>";
 
 	$sql = "select * from `mempdata` where timestamp BETWEEN '$startTime' and '$endTime';";
 	echo $sql;

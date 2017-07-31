@@ -148,6 +148,7 @@ session_activity();
 					</div>
 
 					<!-- Text input Email-->
+					<!--
 					<div class="form-group">
 						<label class="col-md-4 control-label">Email ID</label>  
 						<div class="col-md-4 inputGroupContainer">
@@ -157,6 +158,7 @@ session_activity();
 							</div>
 						</div>
 					</div>
+					-->
 											
 					<!-- Text input Phone-->
 					<div class="form-group">
@@ -194,6 +196,19 @@ session_activity();
 					<!-- Select Basic Dept -->
 					<div class="form-group"> 
 						<label class="col-md-4 control-label">Department</label>
+						<div class="col-md-4">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+								<input class="form-control" placeholder="Department" name="dept" type="text">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+								<input class="form-control" placeholder="Department Code" name="deptcode" type="text">
+							</div>
+						</div>
+						<!--
 						<div class="col-md-4 selectContainer">
 							<div class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
@@ -246,7 +261,9 @@ session_activity();
 									   	<option value="3000">CO&CCP/Bat/H&R-3000<option>					  							 
 								</select>
 							</div>
+							
 						</div>
+						-->
 					</div>
 
 					<!-- Text input Dept Code-->
@@ -285,7 +302,7 @@ session_activity();
 							<div class="col-md-6">
 								<!-- Text input IFSC-->
 								<div class="form-group">
-									<label class="col-md-2 control-label">IFSC</label>  
+									<label class="col-md-2 control-label">IFS Code</label>  
 									<div class="col-md-6 inputGroupContainer">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
@@ -307,20 +324,20 @@ session_activity();
 											<select name="bank" class="form-control selectpicker" id="bank">
 												<option value="" disabled>Please select your bank</option>
 												<option  value="">Bank Name</option>
-	  						                                       <option  value="Andhra Bank">Andhra Bank</option>
-                                                                                               <option  value="Axis Bank">Axis Bank</option>
-                                                                                               <option  value="BI">BI</option> 
-                                                                                               <option  value="BOB">BOB</option>
-                                                                                                <option  value="CBI">CBI</option>
-                                                                                                <option  value="Syndicate Bank">Syndicate Bank</option>
-                                                                                                <option  value="SBH">SBH</option>
-                                                                                                <option value="Canara  Bank">Canara  Bank</option>
-                                                                                                <option  value="IndusInd Bank">IndusInd Bank</option>
-                                                                                                <option  value="SBI">SBI</option>
-                                                                                                <option  value="CBI">CBI</option>
-                                                                                               <option  value="DCC Bank">DCC Bank</option>
-                                                                                               <option  value="HDFC Bank">HDFC Bank</option>
-                                                                                                 <option  value="HSBC Bank">HSBC Bank</option>
+												<option  value="Andhra Bank">Andhra Bank</option>
+												<option  value="Axis Bank">Axis Bank</option>
+												<option  value="BI">BI</option> 
+												<option  value="BOB">BOB</option>
+												<option  value="CBI">CBI</option>
+												<option  value="Syndicate Bank">Syndicate Bank</option>
+												<option  value="SBH">SBH</option>
+												<option value="Canara  Bank">Canara  Bank</option>
+												<option  value="IndusInd Bank">IndusInd Bank</option>
+												<option  value="SBI">SBI</option>
+												<option  value="CBI">CBI</option>
+												<option  value="DCC Bank">DCC Bank</option>
+												<option  value="HDFC Bank">HDFC Bank</option>
+												<option  value="HSBC Bank">HSBC Bank</option>
 											</select>
 										</div>
 									</div>
@@ -330,7 +347,7 @@ session_activity();
 							<div class="col-md-6">
 								<!-- Text input Bank Area-->
 								<div class="form-group">
-									<label class="col-md-2 control-label">Area</label>  
+									<label class="col-md-2 control-label">Branch</label>  
 									<div class="col-md-6 inputGroupContainer">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -353,7 +370,27 @@ session_activity();
 						<div class="col-md-4 inputGroupContainer">
 							<div class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-								<input name="address" placeholder="flat, area, post" class="form-control" type="text">
+								<input name="address" placeholder="Door/Quarter Number" class="form-control" type="text">
+							</div>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+								<input name="address" placeholder="Flat Number" class="form-control" type="text">
+							</div>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+								<input name="address" placeholder="Street/Sector" class="form-control" type="text">
+							</div>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+								<input name="address" placeholder="Area" class="form-control" type="text">
+							</div>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+								<input name="address" placeholder="Post" class="form-control" type="text">
 							</div>
 						</div>
 					</div>
